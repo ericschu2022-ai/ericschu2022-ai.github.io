@@ -1,119 +1,170 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>數據分析與 AI 工程師 | 個人專業作品集</title>
-    <script src="https://tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>個人專業作品集 | 數據分析與 AI 開發</title>
     <style>
-        .hero-gradient { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); }
-        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --accent: #38bdf8;
+        }
+
+        body {
+            font-family: 'Segoe UI', Microsoft JhengHei, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            border-left: 5px solid var(--primary);
+            padding-left: 1rem;
+            color: var(--primary);
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-item {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: 8px;
+            border-top: 3px solid var(--accent);
+        }
+
+        .job-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        .project-card {
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
     </style>
-</head> 
-<body class="bg-gray-50 font-sans">
+</head>
+<body>
 
-    <!-- 導航欄 -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between items-center h-16">
-                <span class="text-xl font-bold text-blue-800">Data Professional</span>
-                <div class="space-x-4">
-                    <a href="#skills" class="text-gray-600 hover:text-blue-600">專業技能</a>
-                    <a href="#projects" class="text-gray-600 hover:text-blue-600">專題作品</a>
-                    <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">聯繫我</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<header>
+    <h1>[你的姓名]</h1>
+    <p>數據分析師 | Python 開發工程師 | AI 數據應用專家</p>
+    <div style="margin-top: 1rem;">
+        <span style="margin: 0 10px;">📧 email@example.com</span>
+        <span style="margin: 0 10px;">🔗 LinkedIn / GitHub</span>
+    </div>
+</header>
 
-    <!-- 英雄區塊 -->
-    <header class="hero-gradient text-white py-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">跨領域數據分析與 AI 應用專家</h1>
-            <p class="text-xl mb-8 opacity-90">精通 Python 程式開發、SQL 資料庫管理、PowerBI 商業智慧與機器學習建模</p>
-            <div class="flex justify-center gap-4">
-                <span class="bg-white/20 px-4 py-2 rounded-full text-sm border border-white/30">數據分析師</span>
-                <span class="bg-white/20 px-4 py-2 rounded-full text-sm border border-white/30">Python 工程師</span>
-                <span class="bg-white/20 px-4 py-2 rounded-full text-sm border border-white/30">AI 建模分析</span>
-            </div>
-        </div>
-    </header>
+<div class="container">
+    <section id="about">
+        <h2>專業目標</h2>
+        <p>
+            具備完整的數據生命週期處理能力，從網路爬蟲數據採集、SQL 資料庫管理，到使用 Python 進行深度數據清理與分析。
+            擅長利用 Power BI 與 Excel 進行商務數據視覺化，並能整合 Git 版本控制進行團隊協作開發。
+        </p>
+    </section>
 
-    <!-- 核心技能 -->
-    <section id="skills" class="py-16 max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">專業技術核心</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- 數據開發 -->
-            <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fab fa-python"></i></div>
-                <h3 class="text-xl font-bold mb-2">Python & 數據爬蟲</h3>
-                <p class="text-gray-600 text-sm">精通基礎語法、物件導向、Requests/Selenium 網路爬蟲及正規表示式處理非結構化資料。</p>
+    <section id="skills">
+        <h2>核心技術能力</h2>
+        <div class="skill-grid">
+            <div class="skill-item">
+                <h3>程式開發與工具</h3>
+                <ul>
+                    <li>Python (基本語法、物件導向)</li>
+                    <li>Git 版本控制系統</li>
+                    <li>資訊及通訊科技平台應用</li>
+                </ul>
             </div>
-            <!-- 資料庫 -->
-            <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-database"></i></div>
-                <h3 class="text-xl font-bold mb-2">資料庫與處理</h3>
-                <p class="text-gray-600 text-sm">熟練 SQL DDL/DML 操作、環境建構與 Excel 樞紐分析，能高效進行大數據清洗與轉置。</p>
+            <div class="skill-item">
+                <h3>數據處理與採集</h3>
+                <ul>
+                    <li>網路爬蟲 (Selenium, Requests)</li>
+                    <li>SQL 資料庫定義與操作 (DDL/DML)</li>
+                    <li>Open Data 開放資料清理</li>
+                </ul>
             </div>
-            <!-- 視覺化 -->
-            <div class="bg-white p-6 rounded-xl shadow-md card-hover">
-                <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-chart-bar"></i></div>
-                <h3 class="text-xl font-bold mb-2">PowerBI 與 AI 建模</h3>
-                <p class="text-gray-600 text-sm">進階 M 語言應用、DAX 運算、機器學習 Model 訓練與商業數據視覺化看板製作。</p>
+            <div class="skill-item">
+                <h3>分析與視覺化</h3>
+                <ul>
+                    <li>Power BI (DAX, M 語言, AI 功能)</li>
+                    <li>Excel 進階數據模型與樞紐分析</li>
+                    <li>Python 客製化數據運算</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- 專題區塊 -->
-    <section id="projects" class="py-16 bg-gray-100 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12">實戰專題項目</h2>
-            <div class="bg-white rounded-2xl overflow-hidden shadow-xl flex flex-col md:flex-row">
-                <div class="md:w-1/2 bg-gray-800 flex items-center justify-center text-white p-12">
-                    <div class="text-center">
-                        <i class="fas fa-laptop-code text-6xl mb-4 text-blue-400"></i>
-                        <h3 class="text-2xl font-bold">結訓專題：全方位數據應用實作</h3>
-                    </div>
-                </div>
-                <div class="md:w-1/2 p-8">
-                    <h4 class="text-blue-600 font-bold mb-2 uppercase tracking-wide">專題內容</h4>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
-                        結合 Python 爬蟲自動化蒐集、SQL 資料庫存取、Excel 數據建模至 PowerBI 進階視覺化，展現從資料獲取到決策建議的完整職能。
-                    </p>
-                    <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Git 版本管理協作</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>自動化數據清洗流程</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>AI 預測模型訓練</li>
-                    </ul>
-                    <button class="w-full border-2 border-blue-600 text-blue-600 py-2 rounded-lg font-bold hover:bg-blue-600 hover:text-white transition">查看專題細節</button>
-                </div>
-            </div>
+    <section id="project">
+        <h2>專題製作成果</h2>
+        <div class="project-card">
+            <h3>[你的專題名稱，例如：零售業銷售預測系統]</h3>
+            <p><strong>技術棧：</strong> Python, SQL, Power BI, Git</p>
+            <p><strong>說明：</strong> 運用 76 小時實作開發，從架構設計、數據爬取到建立 AI 預測模型，最終以 Power BI 產出互動式儀表板，協助企業進行決策分析。</p>
         </div>
     </section>
 
-    <!-- 職位目標 -->
-    <section class="py-16 max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">期待服務產業</h2>
-        <div class="flex flex-wrap justify-center gap-4">
-            <span class="px-6 py-3 bg-blue-100 text-blue-800 rounded-full font-medium">零售/電商</span>
-            <span class="px-6 py-3 bg-blue-100 text-blue-800 rounded-full font-medium">金融科技</span>
-            <span class="px-6 py-3 bg-blue-100 text-blue-800 rounded-full font-medium">醫療資訊</span>
-            <span class="px-6 py-3 bg-blue-100 text-blue-800 rounded-full font-medium">社交平台</span>
+    <section id="career">
+        <h2>期待職位</h2>
+        <div class="job-tags">
+            <span class="tag">數據分析師</span>
+            <span class="tag">Python 開發工程師</span>
+            <span class="tag">商業智能 (BI) 工程師</span>
+            <span class="tag">AI 數據專員</span>
+            <span class="tag">資料視覺化專家</span>
+            <span class="tag">大數據系統工程師</span>
         </div>
     </section>
+</div>
 
-    <!-- 頁尾 -->
-    <footer id="contact" class="bg-gray-900 text-white py-12 px-4 text-center">
-        <h2 class="text-2xl font-bold mb-4">準備好為您的企業挖掘數據價值</h2>
-        <p class="mb-8 opacity-70">具備職場倫理、溝通協調能力與高度技術執行力</p>
-        <div class="flex justify-center space-x-6">
-            <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin text-2xl"></i></a>
-            <a href="#" class="hover:text-blue-400"><i class="fab fa-github text-2xl"></i></a>
-            <a href="mailto:yourname@example.com" class="hover:text-blue-400"><i class="fas fa-envelope text-2xl"></i></a>
-        </div>
-        <p class="mt-8 text-sm opacity-50">© 2024 個人數據作品集. All Rights Reserved.</p>
-    </footer>
+<footer>
+    <p>&copy; 2026 [你的姓名] - 數據分析專業組合目錄</p>
+</footer>
 
 </body>
 </html>
